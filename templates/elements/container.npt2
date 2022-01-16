@@ -1,0 +1,11 @@
+{ 
+	"category": "Elements",
+	"name": "Container",
+	"description": "A container is a layout element (a “div block”) that keeps your content centered relative to the browser window. On larger displays, they default to a 940px initial width, and on smaller devices (like phones and tablets), they extend across the full width of the screen.",
+	"icon": "templates/elements/container.svg",
+	"content": {
+		"type":"page-row",
+		"content": {
+		}
+	}
+}

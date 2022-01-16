@@ -1,0 +1,105 @@
+{
+	"name": "swip-dashboard",
+	"version": "1.2",
+	"resources": {
+		 "fonts": {
+			"raleway.css": {
+				"url": "https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700"
+			},
+			"font-awesome-pro.json": {
+			 	"type": "bundle",
+				"url": "font-awesome-pro.json"
+			}
+        },
+		"pre-configuration.json": {
+			"type": "bundle",
+			"url": "config/pre-configuration.json"
+		},
+		"web-plato-color.json": {
+            "type": "bundle",
+            "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/tokens/color/bundle.json"
+        },
+		"post-configuration.json": {
+            "type": "bundle",
+            "url": "config/post-configuration.json"
+        },
+        "web-plato.json": {
+            "type": "bundle",
+            "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/bundle.json",
+            "excludes": ["tokens/color"]
+        },
+        "extras": {
+            "theme-mapping.json": {
+                "type": "bundle",
+                "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/theme-mapping/bundle.json"
+            },
+            "page-builder-mapping.json": {
+                "type": "bundle",
+                "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/page-builder-mapping/bundle.json",
+                "excludes": ["form/checkbox.scss"]
+            }
+        },
+		"utils": {
+			"reset.scss": {
+				"url": "utils/reset.scss"
+			},
+			"helpers.scss": {
+				"url": "utils/helpers.scss"
+			},
+			"grid.scss": {
+				"url": "utils/grid.scss"
+			}
+		},
+		"templates": {
+			"skeleton-sidebar.scss": {
+				"url": "templates/skeleton-sidebar.scss"
+			},
+			"skeleton-guest.scss": {
+				"url": "templates/skeleton-guest.scss"
+			}
+		},
+		"modules": {
+			"auth.scss": {
+				"url": "modules/auth.scss"
+			},
+			"data-cards.scss": {
+				"url": "modules/data-cards.scss"
+			},
+			"data-table.scss": {
+				"url": "modules/data-table.scss"
+			},
+			"data-google-map.scss": {
+				"url": "modules/data-google-map.scss"
+			},
+			"page-actions.scss": {
+				"url": "modules/page-actions.scss"
+			},
+			"page-form.scss": {
+				"url": "modules/page-form.scss"
+			},
+			"page-chart.scss": {
+				"url": "modules/page-chart.scss"
+			},
+			"page-prompt.scss": {
+				"url": "modules/page-prompt.scss"
+			},
+			"n-paging.scss": {
+				"url": "modules/n-paging.scss"
+			}
+        },
+        "elements": {
+			"header.scss": {
+				"url": "elements/header.scss"
+			},
+			"button.scss": {
+				"url": "elements/button.scss"
+			},
+			"line-data.scss": {
+				"url": "elements/line-data.scss"
+			},
+			"tag.scss": {
+				"url": "elements/tag.scss"
+			}
+		},
+	}
+}

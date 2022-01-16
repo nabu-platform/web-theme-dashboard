@@ -1,0 +1,272 @@
+.n-form {
+	.n-form-component {
+		min-width: initial;
+		margin-bottom: $space-base;
+
+		.n-form-label-wrapper {
+			margin-bottom: 0;
+			
+			.n-form-label {
+				font-size: $font-size-xsmall;	
+				font-weight: $font-weight-emphasis;
+				color: $color-neutral-black !important;
+				margin-bottom: .5rem !important;
+				padding: 0 !important;
+			}
+			
+			.n-info {
+				.n-info-content {
+					font-size: $font-size-xsmall;
+					right: 0;
+					padding: .5rem 1rem;
+				}
+			}
+		}
+		
+		.n-form-input-wrapper {
+			.field {
+				color: $color-neutral-black;
+				font-size: $font-size-small;
+				border: 1px solid $color-neutral-base;
+				outline: none !important;
+				border-radius: 2px;
+				height: 2.5rem;
+				line-height: 2.5rem;
+				
+				&:focus-visible,
+				&:focus {
+					border: 1px solid $color-neutral-darker;
+				}
+				&.n-form-invalid {
+					color: $color-neutral-black;
+					border: 1px solid $color-neutral-base;
+				}
+				&.n-form-valid {
+					
+				}
+			}
+			
+			.n-form-suffix {
+				height: auto;
+			    top: 1px;
+			    bottom: 1px;
+			    left: none;
+			    right: 1px;
+			    width: auto;
+			    line-height: 1;
+			    padding: 0.5rem 1rem;
+			    transform: translateX(0);	
+				.icon {
+
+				}
+				
+				&.n-icon {
+				    height: auto;
+				    top: 1px;
+				    bottom: 1px;
+				    left: none;
+				    right: 1px;
+				    width: auto;
+				    line-height: 1;
+				    padding: 0.5rem 1rem;
+				    transform: translateX(0);
+				}
+			}
+			
+			.n-form-date .n-form-date-icon:before {
+				font-size: $font-size-small;
+			}
+		}
+		
+	
+		
+		.field.n-form-invalid ~ .n-icon {
+			
+		}
+
+		.n-form-component-after {
+			margin: 0;
+			margin-top: .125rem;
+			font-size: $font-size-tiny;
+			
+			.icon {
+				
+			}
+			.n-form-component-after-label {
+				
+			}
+		}
+		
+		.n-messages {
+			
+			.n-message {
+				
+				.title {
+					
+				}
+			}
+		}
+	}
+	
+	.n-form-combo {
+		.n-input-combo {
+			.n-input-combo-input-container {
+				.n-input-combo-input {
+					font-size: $font-size-small;
+					border: 1px solid $color-neutral-base;
+					border-radius: 4px;
+					height: 2.5rem;
+					line-height: 2.5rem;
+					cursor: pointer;
+					
+					&:focus-visible,
+					&:focus {
+						border: 1px solid $color-neutral-darker;
+					}
+				}
+				.n-icon {
+					color: $color-secondary-base;
+					font-size: $font-size-tiny;
+					top: 1rem;
+					font-weight: $font-weight;
+				}
+				.n-input-combo-dropdown {
+					.n-input-combo-dropdown-value {
+						background-color: $color-neutral-white;
+						color: $color-neutral-black;
+						
+						&.pondering {
+							background-color: $color-neutral-white;
+							color: $color-neutral-black;
+						}
+						
+						&.active {
+							background-color: $color-neutral-lightest;
+							color: $color-neutral-black;
+							
+							&::before {
+								content: "\2713";
+								font-size: $font-size-base;
+								position: absolute;
+								right: .25rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.n-form-date {
+		.n-form-date-input + .n-input-date {
+			margin-top: -1rem;
+		}
+		
+		.n-form-date-icon:before {
+			font-size: $font-size-small !important;
+		}
+		
+		.n-input-date {
+			right: 0 !important;
+			font-family: $font-family;
+			max-width: 20rem !important;
+			
+			table {
+				.n-input-combo .n-input-combo-input-container input {
+					height: 2rem !important;
+					line-height: 2rem !important;
+				}
+				thead > tr {
+					th {
+						font-size: $font-size-tiny;
+						font-weight: $font-weight-medium;
+					}
+				}
+				
+				thead.caption {
+					.month {
+						font-size: $font-size-base !important;	
+					}
+				}
+				
+				tbody > tr {
+					td {
+						padding: 1rem 0 !important;
+						a {
+							color: $color-general-black !important;
+							text-decoration: none;
+						}
+					}
+					td.n-input-date-today, 
+					span.n-input-date-today {
+						background-color: $color-secondary-light !important; 
+					}
+					td.n-input-date-today a,
+					span.n-input-date-today a {
+						color: $color-general-black !important; 
+					}
+					td.n-input-date-selected, 
+					.span.n-input-date-selected {
+						background-color: $color-primary-light !important; 
+					}
+				}
+			}
+		}
+	}
+}
+
+.n-form.filter {
+	.n-form-component {
+		.n-form-input-wrapper {
+			.field {
+				font-size: $font-size-xsmall;
+			}
+		}
+	}
+	.n-form-combo {
+		.n-input-combo {
+			.n-input-combo-input-container {
+				.n-input-combo-input {
+					font-size: $font-size-xsmall;
+				}
+			}
+		}
+		.n-input-combo-dropdown {
+			.n-input-combo-dropdown-value {
+				font-size: $font-size-xsmall;
+			}
+		}
+	}
+}
+
+.n-form-section.row {
+	align-items: flex-start;
+}
+
+.has-title {
+	h3 {
+		font-family: $font-family;
+		font-size: $font-size-large;
+		margin-bottom: 1.5rem;
+		font-weight: $font-weight-medium;
+	}
+}
+
+.page-form,
+.data-table-list,
+.data-cards {
+	h2 {
+		font-family: $font-family;
+		font-size: $font-size-large;
+		margin-bottom: 1.5rem;
+		font-weight: $font-weight-medium;
+	}
+	
+	.global-actions {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 1rem;
+	}
+}

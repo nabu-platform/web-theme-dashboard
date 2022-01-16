@@ -1,0 +1,11 @@
+{ 
+	"category": "Elements",
+	"name": "Columns",
+	"description": "Columns let you create sections of content that sit side by side on your website, like the columns in newspapers. You can choose how many columns you want and their widths. You can also control how they display on smaller screens — such as stacking them.",
+	"icon": "templates/elements/columns.svg",
+	"content": {
+		"type":"page-row",
+		"content": {
+		}
+	}
+}

@@ -1,0 +1,202 @@
+
+$grid-columns:      	12;
+$grid-gutter-width: 	1.5rem;
+$grid-row-columns:		6;
+$container-padding-x: 	$grid-gutter-width * .5;
+$gutters: 				$spacers;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin create-mq($breakpoint, $min-or-max) {
+	@if($breakpoint == 0) {
+		@content;
+	} @else {
+		@media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+			@content;
+		}
+	}
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin make-container($padding-x: $container-padding-x) {
+	width: 100%;
+	padding-right: $padding-x;
+	padding-left: $padding-x;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: $gutter * -.5;
+	margin-left: $gutter * -.5;
+}
+
+@mixin make-col-ready($gutter: $grid-gutter-width) {
+	box-sizing: border-box;
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: $gutter * .5;
+	padding-left: $gutter * .5;
+	margin-top: 0;
+}
+
+@mixin make-col($size: false, $columns: $grid-columns, $gutter: $grid-gutter-width) {
+	@if $size {
+		flex: 0 0 auto !important;
+		width: ($size / $columns) * 100% !important;
+		max-width: ($size / $columns) * 100% !important;
+		padding-right: $gutter * .5;
+		padding-left: $gutter * .5;
+	} @else {
+		flex: 1 1 0;
+		max-width: 100%;
+		padding-right: $gutter * .5;
+		padding-left: $gutter * .5;
+	}
+} 
+
+@mixin make-col-auto() {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+@mixin row-cols($count) {
+	> * {
+		flex: 0 0 auto;
+		width: 100% / $count;
+	}
+}
+
+@mixin make-columns($grid-columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+	@each $breakpoint in map-keys($breakpoints) {
+	 	$modifier: breakpoint-infix($breakpoint, $breakpoints);
+	 	
+	  	@include media-breakpoint-up($breakpoint, $breakpoints) {
+			.pb-col#{$modifier} {
+				flex: 1 0 0%;
+			}
+			
+			.pb-row-cols#{$modifier}-auto > * {
+				@include make-col-auto();
+			}
+			
+			.pb-col#{$modifier}-offset-0 {
+				margin-left: 0;
+			}
+			
+			@for $i from 1 through $grid-row-columns {
+				.row-cols#{$modifier}-#{$i} {
+					@include row-cols($i);
+				}
+			}
+			
+			@for $i from 1 through $grid-columns {
+				.pb-col#{$modifier}-#{$i} {
+					@include make-col($i, $grid-columns);
+				}
+			}
+		}
+	}
+}
+
+
+.pb-container,
+.pb-container-fluid {
+	@include make-container();
+}
+
+@each $breakpoint, $container-max-width in $container-max-widths {
+	.pb-container-#{$breakpoint} {
+		@extend .pb-container-fluid;
+	}
+	
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		%responsive-container-#{$breakpoint} {
+			max-width: $container-max-width;
+		}
+		
+		$extend-breakpoint: true;
+		
+		@each $name, $width in $grid-breakpoints {
+			@if ($extend-breakpoint) {
+				.pb-container#{breakpoint-infix($name, $grid-breakpoints)} {
+					@extend %responsive-container-#{$breakpoint};
+				}	
+				@if ($breakpoint == $name) {
+					$extend-breakpoint: false;
+				}
+			}
+		}
+	}
+}
+
+.wrapper {
+	@include make-container();
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.page-row.pb-row {
+	@include make-row();
+		
+	> * {
+		@include make-col-ready();
+	}
+}
+
+.page-cell.pb-row {
+	> .page-rows {
+		@include make-row();
+			
+		> * {
+			@include make-col-ready();
+		}
+	}
+}
+
+@include make-columns();

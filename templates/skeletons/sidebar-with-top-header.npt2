@@ -1,0 +1,89 @@
+{
+	"category": "Skeletons",
+	"name": "Sidebar With Top Header",
+	"description": "The sidebar layout is made up of a logo and links and the main view has a top header",
+	"icon": "templates/skeletons/menu-left.png",
+	"content": {
+		"type":"page-row",
+		"content": {
+			"class": "skeleton-sidebar",
+			"name": "Sidebar Skeleton",
+			"cells": [
+				{
+					"name": "Sidebar",
+					"class": "page-sidebar"
+					"rows": [
+						{
+							"name": "--container",
+							"direction": "vertical",
+							"cells": [
+								{
+									"alias": "page-static-image",
+									"name": "Brand / Logo",
+									"class": "page-sidebar-brand",
+									"state": {
+										"title": "null",
+										"height": "4rem",
+										"size": "native",
+										"imagePath": "images/logo"
+									}
+								},
+								{
+									"name": "Navigation",
+									"alias": "page-actions",
+									"state": {
+										"class": "page-sidebar-nav",
+										"autoActions": true
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Main View",
+					"class": "page-main-view"
+					"rows": [
+						{
+							"name": "--container",
+							"direction": "vertical",
+							"cells": [
+								{
+									"class": "full-width",
+									"name": "Top Header"
+									"rows": [
+										{
+											"name": "--container"
+											"cells": [
+												{
+													"name": "Header Left",
+													"alias": "page-actions",
+													"state": {
+														"class": "page-top-header-left"
+													}
+												},
+												{
+													"name": "Header Right",
+													"alias": "page-actions",
+													"state": {
+														"class": "page-top-header-right"
+													}
+												}
+											],
+										}
+									],
+								},
+								{
+									"name": "Main Content",
+									"class": "full-width",
+									"customId": "main",
+									"width": 1
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}

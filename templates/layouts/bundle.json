@@ -1,0 +1,20 @@
+{
+	"name": "swip-dashboard--layouts",
+	"resources": {
+		"simple-navigation.npt": {
+			"url": "simple-navigation.npt"
+		},
+		"sticky-navigation.npt": {
+			"url": "sticky-navigation.npt"
+		},
+		"style.scss": {
+			"url": "style.scss"
+		},
+		"menu-top.png": {
+			"url": "menu-top.png"
+		},
+		"navigation.svg": {
+			"url": "navigation.svg"
+		}
+	}
+}

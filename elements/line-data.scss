@@ -1,0 +1,32 @@
+.line-data {
+	font-size: $font-size-xsmall;
+	
+	.page-field {
+		padding: 0.75rem 0;
+		display: flex;
+		justify-content: space-between;
+		
+		&:not(:nth-child(1)) {
+			border-top: solid 1px $color-neutral-dark;
+		}
+		dt {
+			font-weight: $font-weight-semi-bold;
+		}
+		
+		dd {
+			h3 {
+				font-size: $font-size-large;
+				font-family: $font-family;
+				font-weight: $font-weight-medium;
+			}
+		}
+	}
+	
+	&.has-title {
+		.page-field {
+			&:nth-child(2) {
+				border-top: none;
+			}
+		}
+	}
+}

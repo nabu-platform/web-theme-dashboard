@@ -1,0 +1,65 @@
+/// VARIABLES 
+
+// ---------------------------------------------- grid
+$container-max-width: 85rem;
+
+$font-icon-family:		"Font Awesome 5 Pro";
+$font-icon-weight:		normal;
+$font-family:			"Raleway", sans-serif;
+$font-family-alt: 		'Inter', sans-serif;
+$font-weight: 			400;
+$font-weight-light: 	300;
+$font-weight-medium:	500;
+$font-weight-semi-bold:	600;
+$font-weight-emphasis: 	700;
+
+// ---------------------------------------------- spacing
+$space-base: 	1rem;
+$space-none:	0;
+$space-xs:		$space-base * .25;
+$space-sm:		$space-base * .5;
+$space-md:		$space-base * .75;
+$space-lg:		$space-base * 1.5;
+$space-xl:		$space-base * 2.5;
+
+
+// ---------------------------------------------- default breakpoints
+$breakpoints: (
+ 	"extra-small": 479px,
+    "small": 767px,
+    "medium": 991px,
+    "large": 1280px,
+    "extra-large": 1440px,
+    "phone": 576px,
+    "tablet": 768px,
+    "laptop": 1200px,
+    "desktop": 1440px,
+    "xs": 476px,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1400px,
+    "xxxl": 1920px
+);
+
+// ---------------------------------------------- spacers
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// ---------------------------------------------- aspect ratios
+$aspect-ratios: (
+  "1x1": 100%,
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "21x9": calc(9 / 21 * 100%)
+);
+

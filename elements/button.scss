@@ -1,0 +1,100 @@
+$button-font-size: $font-size-small;
+$button-font-weight: $font-weight-semi-bold;
+$button-line-height: 1 !important;
+$button-height: 2.25rem !important;
+$button-border-radius: 4px;
+$button-color-primary: $color-secondary-dark;
+$button-margin: 1rem;
+
+@mixin button-color($color) {
+	background: transparent;
+	color: $color;
+	border: 1px solid $color;
+	
+	&:hover {
+		background: $color-secondary-light;
+		color: darken($color, 8%);
+		transition: all 0.3s ease;
+	}
+}
+
+@mixin button-bg($color) {
+	background: $color;
+	color: $color-general-white;
+	border: 1px solid $color-general-white;
+	
+	&:hover {
+		background: darken($color, 5%);
+		transition: all 0.3s ease;
+	}
+}
+
+button, .button, .p-button {
+	font-weight: $button-font-weight;
+	height: $button-height;
+	margin: 0 !important;
+	margin-bottom: $button-margin;
+	line-height: $button-line-height;
+	cursor: pointer;
+	@include button-bg($color-secondary-dark);
+
+	&:hover {
+		transform: translate(0, 0) !important;
+	}
+	
+	&:disabled {
+		pointer-events: none;
+	}
+
+	&.primary {
+		@include button-bg($color-secondary-dark);
+		border-radius: $button-border-radius;
+		font-size: $font-size-xsmall;
+	}
+	
+	&.primary-with-border {
+		font-size: $font-size-small;
+		@include button-color($color-secondary-dark);
+	}
+	
+	&.secondary {
+		font-size: $font-size-xsmall;
+		@include button-color($color-secondary-base);
+		border-radius: $button-border-radius;
+	}
+	
+	&.secondary-solid {
+		@include button-bg($color-secondary-dark);
+	}
+	
+	&.inline {
+		margin: 0;
+	}
+	
+	&.has-icon {
+		height: $button-height;
+		padding: 0 1.5rem !important;
+		font-weight: $button-font-weight;
+		line-height: $button-line-height;
+
+		.icon, .fa {
+			margin-right: $space-sm;
+		}
+	}
+	
+	&.has-icon-right {
+		.icon, .fa {
+			margin-right: 0;
+			margin-left: $space-sm;
+		}
+	}
+	
+	&.is-icon,
+	&.icon-only {
+		.icon {
+			left: 50%;
+			margin: 0;
+    		transform: translate(-50%, -50%);
+		}
+	}
+}

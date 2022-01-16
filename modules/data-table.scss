@@ -1,0 +1,239 @@
+table.classic {
+	width: 100%;
+	border: 1px solid $color-neutral-darker;
+
+	thead > tr {
+		background-color: $color-secondary-light;
+		box-shadow: inset 0px -1px 0px $color-neutral-base;
+		text-transform: uppercase;
+		line-height: 2;
+		
+		th {
+			padding: .75rem;
+			color: $color-secondary-dark;
+			font-size: $font-size-tiny;
+			white-space: nowrap;
+			text-align: left;
+			font-weight: $font-weight-emphasis;
+			
+			.n-form-component {
+				display: inline-block;
+			}
+		}
+	}
+	
+	tbody {
+		tr {
+			td {
+				font-size: $font-size-xsmall;
+				padding: .75rem .75rem;
+				border-top: 1px solid $color-neutral-base;
+
+				.page-field {
+					white-space: nowrap;
+					display: inline-block;
+				}
+				
+				.n-form-component {
+					display: inline-block;
+				}
+				
+				svg.frappe-chart {
+					text {
+						font-size: 8px;
+					}
+				}
+				
+				.tag {
+					margin: 0 0.25rem;
+					background-color: $color-neutral-base;
+					color: $color-general-black;
+					font-size: $font-size-tiny;
+					text-transform: uppercase;
+					border-radius: 4px;
+					padding: 0.25rem 0.5rem;
+					
+					&.warning {
+						background-color: $color-warning-light;
+						color: $color-warning-base;
+					}
+					&.good {
+						background-color: $color-success-light;
+						color: $color-success-base;
+					}
+				}
+				
+				&.actions {
+					text-align: right;
+					padding: 0 .75rem;
+					
+					.p-button {
+						display: inline-flex;
+						align-items: center;
+						border: none;
+						font-size: $font-size-tiny;
+						background-color: transparent;
+						padding: .25rem;
+						margin: 0;
+						color: $color-general-black;
+						height: 1.75rem !important;
+						line-height: 1.75rem !important;
+						cursor: pointer;
+						
+						.fa {
+							color: $color-general-black;
+							font-size: $font-size-tiny;
+						}
+						
+						&:hover {
+							color: $color-primary-base;
+							
+							.fa {
+								color: $color-primary-base;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+table.data-with-chart {
+	border-right: none;
+	border-bottom: none;
+	
+	thead > tr {
+		th:last-child {
+			border-right: 1px solid $color-neutral-darker;
+		}
+	}
+	
+	tbody {
+		tr {
+			td {
+				padding: 0 .75rem;
+				border: 1px solid $color-neutral-base;
+				border-style: none solid solid none;
+
+				&.danger {
+					font-weight: $font-weight-semi-bold;
+					background: $color-danger-light;
+					color: $color-danger-base;
+				}
+				&.warning {
+					font-weight: $font-weight-semi-bold;
+					color: $color-warning-base;
+					background: $color-warning-light;
+				}
+			}
+		}
+	}
+	
+	.inline-frappe-chart {
+		width: 250px;
+		padding: $space-md $space-sm;
+		
+		.chart-container {
+			width: 250px;
+		}
+		.axis {
+			&.y > :not(:first-child):not(:last-child) {
+				display: none;
+			}
+			&.x > :not(:first-child) {
+				display: none;
+			}
+		}
+		.dataset-units {
+			border: solid 1px $color-neutral-base;
+		}
+		.page-arbitrary {
+			margin-top: -$space-lg;
+			margin-left: -$space-lg;
+		}
+		svg {
+			// a negative top margin prevents hover effects and mispositions the hover
+			// the left margin also mispositions the hover
+			margin-right: -$space-base;
+			margin-bottom: -$space-lg;
+		}
+	}
+	
+	.fill-degree {
+		border-left: none !important;
+	}
+}
+
+table.selectable {
+	tbody {
+		tr {
+			&.selected {
+				background-color: $color-neutral-lighter;
+			}
+			
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.data-common-header {
+	margin: 0;
+	
+	.n-form.filter {
+		.n-form-component {
+			margin: 0;
+		}
+		section.n-form-content {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			
+			> div {
+				flex: 1;
+				margin-right: $space-xs;
+				max-width: 30rem;
+			}
+		}
+	}
+
+	
+	.default-filter-tags {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: $space-xs;
+		
+		.default-filter-tag {
+			cursor: pointer;
+			background-color: $color-neutral-base;
+			pointer-events: all;
+			padding: 0.25rem 1.5rem 0.25rem .5rem;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			margin-bottom: $space-sm;
+			position: relative;
+			
+			.value {
+				font-weight: $font-weight-semi-bold;
+				font-size: $font-size-tiny;
+			}
+			.key {
+				font-size: $font-size-tiny;
+				margin-left: $space-xs;
+			}
+			.fa {
+				position: absolute;
+				font-weight: $font-weight;
+				top: .35rem;
+				font-size: $font-size-tiny;
+				right: $space-sm;
+			}
+			+.default-filter-tag {
+				margin-left: 0.25rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,120 @@
+$header__padding: 0 1rem;
+$header__padding--desktop: 0 2.5rem;
+$header__logo--margin: 0 $space-md 0 0;
+$header__logo--margin--desktop: 0 $space-lg 0 0;
+$header__height: 80px;
+$header__height--desktop: 100px;
+
+.c-header {
+	background: $color-general-white;
+	position: sticky !important;
+	top: 0;
+	display: flex;
+	flex-flow: row wrap;
+	z-index: 99;
+	border-bottom: 1px solid $color-neutral-light;
+}
+
+.c-header .container {
+	display: flex;
+	align-items: center;
+	height: $header__height;
+	width: 100%;
+	padding: $header__padding;
+	
+	@include media('>=laptop') {
+		padding: $header__padding--desktop;
+		height: $header__height--desktop;
+	}
+	
+	> .page-rows {
+		flex: 1;
+	}
+}
+
+.c-header__logo {
+	display: flex;
+	align-items: center;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-grow: initial !important;
+	position: relative;
+	z-index: 98;
+
+	img {
+		height: 100% !important;
+		width: 60px;
+		vertical-align: middle;
+    }
+}
+
+.c-header__menu {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	height: 100%;
+	justify-content: flex-end;
+	
+	.page-action:not(:last-child) {
+		margin-right: 1.5rem;
+	}
+	
+	.page-action-link {
+		color: $color-primary-base;
+	    text-decoration: none;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    
+		&.cart {
+			.icon {
+				font-size: $font-size-large;
+			}
+		}
+		
+		&:hover {
+			color: $color-primary-dark;
+		}
+		
+		&.is-active {
+			.icon {
+				color: $color-primary-darkest;
+			}
+		}
+	}
+}
+
+	
+.fixed-footer {
+	width: 100%;
+	background-color: $color-general-white;
+	position: fixed !important;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	padding: 1rem 3.5rem;
+	
+	> .page-cell {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	
+	.page-actions {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		justify-content: flex-end;
+		
+		button {
+			margin: 0;
+			margin-right: .25rem;
+		}
+	}
+}
+	
+div + .footer-menu {
+	margin-top: 100px;
+}

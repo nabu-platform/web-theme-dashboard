@@ -1,0 +1,23 @@
+{
+	"name": "swip-dashboard--elements",
+	"resources": {
+		"section.npt": {
+			"url": "section.npt"
+		},
+		"container.npt": {
+			"url": "container.npt"
+		},
+		"columns.npt": {
+			"url": "columns.npt"
+		},
+		"style.scss": {
+			"url": "style.scss"
+		},
+		"section.svg" {
+			"url": "section.svg"
+		},
+		"container.svg": {
+			"url": "container.svg"
+		}
+	}
+}

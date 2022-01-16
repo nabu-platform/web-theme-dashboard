@@ -1,0 +1,39 @@
+body {
+	background: $color-general-white;
+	font-size: $font-size-small;
+}
+
+::-webkit-input-placeholder {
+	color: $color-secondary-base;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+::-moz-focus-inner {
+	border: none;
+}
+
+.main-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: white;
+    
+ 	&.padding-bottom {
+ 		padding-top: 1rem;
+ 	}
+}
+
+.block {
+	position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: white;
+}

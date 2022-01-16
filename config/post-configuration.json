@@ -1,0 +1,16 @@
+{
+    "name": "swip-dashboard--post-configuration",
+    "resources": {
+        "tokens": {
+            "borders.scss": {
+                "url": "tokens/borders.scss"
+            },
+            "type-scale.scss": {
+                "url": "tokens/type-scale.scss"
+            },
+            "icons.scss": {
+                "url": "tokens/icons.scss"
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.tag {
+	margin: 0 0.25rem;
+	background-color: $color-neutral-base;
+	color: $color-general-black;
+	font-size: $font-size-tiny;
+	text-transform: uppercase;
+	border-radius: 4px;
+	padding: 0.25rem 0.5rem;
+	
+	&.warning {
+		background-color: $color-warning-light;
+		color: $color-warning-base;
+	}
+	&.good {
+		background-color: $color-success-light;
+		color: $color-success-base;
+	}
+}

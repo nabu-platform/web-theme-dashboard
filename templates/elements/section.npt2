@@ -1,0 +1,11 @@
+{ 
+	"category": "Elements",
+	"name": "Section",
+	"description": "A section is a layout element (a "div block") with a width of 100%, so it extends across the full width of the browser window. It's perfect for full-screen background images, videos, and other content.",
+	"icon": "templates/elements/section.svg",
+	"content": {
+		"type":"page-row",
+		"content": {
+		}
+	}
+}

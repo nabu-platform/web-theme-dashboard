@@ -1,0 +1,14 @@
+{
+	"name": "swip-dashboard--skeletons",
+	"resources": {
+		"sidebar-with-top-header.npt": {
+			"url": "sidebar-with-top-header.npt"
+		},
+		"style.scss": {
+			"url": "style.scss"
+		},
+		"menu-left.png": {
+			"url": "menu-left.png"
+		}
+	}
+}

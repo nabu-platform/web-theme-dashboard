@@ -1,0 +1,13 @@
+.n-prompt,
+.page-prompt {
+	.n-prompt-content,
+	.n-prompt-container {
+		color: $color-general-black;
+		background: $color-general-white;
+		border-radius: 8px;
+		
+		.n-confirm .n-confirm-content {
+		    padding: 2rem 0.5rem;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.data-cards {
+	display: flex;
+	flex-direction: column;
+	
+	.data-common-header {
+		/*order: 1;*/
+		
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+	
+	.data-card-list {
+		order: 3;
+		@include make-row();
+
+		.data-card {
+			@include make-col-ready();
+			margin-top: 1rem;
+			
+			@include media('>=desktop') {
+				@include make-col(6, 12);
+			}
+			
+			@include media('>=desktop') {
+				@include make-col(4, 12);
+			}
+			
+			.data-card-actions {
+				.p-button {
+					height: 2rem !important;
+				// 	background: transparent;
+				// 	color: $color-secondary-base;
+				}
+			}
+		}
+	}
+	
+	.data-common-footer {
+		order: 1;
+		
+		.global-actions {
+			flex-direction: row;
+		}
+	}
+}

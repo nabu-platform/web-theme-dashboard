@@ -1,0 +1,34 @@
+{ 
+	"category": "Layouts",
+	"name": "Simple Navigation",
+	"description": "The Simple navigation layout is made up of a logo, links, and a call-to-action button. On smaller devices, the links stack vertically as buttons.",
+	"icon": "templates/layouts/navigation.svg",
+	"content": {
+		"type":"page-row",
+		"content": [{
+			"name": "Top Menu",
+			"class": "full-width",
+			"condition": "$services.user.loggedIn",
+			"cells": [{
+				"name": "Main Menu",
+				"alias": "page-actions",
+				"state": {
+					"class": "menu",
+					"autoActions": true,
+					"isFixedHeader": true
+				}
+			}]
+		}, {
+			"direction": "vertical",
+			"name": "Basic Container",
+			"class": "basic-container",
+			"cells": [
+				{
+					"name": "Main Content",
+					"customId": "main",
+					"class": "basic-content"
+				}
+			]
+		}]
+	}
+}
