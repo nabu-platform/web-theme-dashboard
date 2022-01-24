@@ -5,6 +5,21 @@
 			margin-left: $space-sm;
 		}
 	}
+	li.page-action.has-children {
+		position: relative;
+		pointer-events: all;
+		
+		&:after {
+			font-family: $font-icon-family;
+			font-size: $space-sm;
+			font-weight: 600;
+			content: '\f078';
+			display: block;
+			position: absolute;
+			right: 1rem;
+			top: 1.25rem;
+		}
+	}
 	.page-action-entry {
 		text-decoration: none;
 		color: $color-general-black;
@@ -22,6 +37,8 @@
 		}
 	}
 	.page-action-entry, button {
+		height: auto !important;
+		line-height: 1.2 !important;
 		display: block;
 		background-color: transparent;
 		padding: 1rem 2rem 1rem $space-sm;
