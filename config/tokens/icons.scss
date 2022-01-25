@@ -1,13 +1,21 @@
 
-.fa {
+.icon.fa {
 	color: $color-secondary-dark;
-	font-weight: $font-weight-emphasis;
+	font-family: $font-icon-family;
 }
 
-.fa-regular {
-	font-weight: $font-weight;
+.fa-regular,
+.far,
+.fab {
+	font-weight: $font-weight !important;
 }
 
-.fa-light {
-	font-weight: $font-weight-light;
+.fa-light,
+.fal {
+	font-weight: $font-weight-light !important;
+}
+
+.fa-solid,
+.fas {
+	font-weight: $font-weight-bold !important;
 }
