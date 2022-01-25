@@ -179,6 +179,11 @@ $container-max-widths: (
 	@include make-container();
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+
+	@include media('<=small') {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 .page-row.pb-row {

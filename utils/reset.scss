@@ -1,6 +1,7 @@
 body {
 	background: $color-general-white;
 	font-size: $font-size-small;
+    color: $color-general-black;
 }
 
 ::-webkit-input-placeholder {
@@ -24,7 +25,7 @@ body {
     position: relative;
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: white;
+    background-color: $color-general-white;
     
  	&.padding-bottom {
  		padding-top: 1rem;
@@ -35,5 +36,5 @@ body {
 	position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
-    background-color: white;
+    background-color: $color-general-white;
 }

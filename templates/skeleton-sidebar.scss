@@ -67,6 +67,10 @@
 			flex-grow: unset !important;
 			position: absolute;
 			right: 1.75rem;
+			
+			@include media('<=small') {
+				right: 1.125rem
+			}
 
 			.page-actions {
 				.page-action-entry {
@@ -117,11 +121,7 @@
 				}
 			}
 			li.page-action.has-children {
-				&.is-open {
-					.icon {
-						color: #1C50D6;
-					}
-				}
+				
 				ul.page-actions-child {
 					padding-left: 2rem;
 
@@ -135,20 +135,16 @@
 				display: flex;
 				align-items: center;
 				line-height: 1.2;
+
+				@include media('<=small') {
+					padding: 1rem;
+				}
 			
 				.icon {
 					line-height: 1.5;
 					margin-right: 1rem;
 					color: $color-accent-base;
 					font-size: $font-size-base;
-				}
-			
-				&.is-active {
-					font-weight: $font-weight-medium;
-
-					.icon {
-						color: $color-primary-base;
-					}
 				}
 			}
 		}
@@ -160,7 +156,7 @@
 		transition: margin-left .45s ease;
 			
 		@include media('<=small') {
-			margin-left: 80px;
+			margin-left: 60px;
 		}
 		
 		/// 2A.	PAGE-TOP-HEADER
@@ -179,7 +175,7 @@
 			@include media('<=small') {
 				min-height: 60px;
 				height: 60px;
-				left: 80px;
+				left: 60px;
 			}
 	
 			.page-heading {
@@ -237,6 +233,11 @@
 	.page-sidebar {
 		width: 80px;
 		max-width: 80px;
+
+		@include media('<=small') {
+			width: 60px;
+			max-width: 60px;
+		}
 	
 		.page-actions.page-actions-root .page-action-entry:not(.toggle) span:not(.icon),
 		.page-sidebar-title,
@@ -252,6 +253,10 @@
 	/// 1A. PAGE-SIDEBAR-HEADER
 	.page-sidebar-header {
 		left: 80px;
+
+		@include media('<=small') {
+			left: 60px;
+		}
 		
 		.page-sidebar-logo {	
 			@include media('<=small') {
@@ -301,13 +306,17 @@
 	/// 2. 	PAGE-MAIN-VIEW
 	.page-main-view {
 		margin-left: 80px;
+
+		@include media('<=small') {
+			margin-left: 60px;
+		}
 	
 		/// 2A.	PAGE-TOP-HEADER
 		.page-top-header {
 			left: 80px;
 			
 			@include media('<=small') {
-				left: 80px;
+				left: 60px;
 			}
 		}	
 	}

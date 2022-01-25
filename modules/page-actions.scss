@@ -8,7 +8,14 @@
 	li.page-action.has-children {
 		position: relative;
 		pointer-events: all;
-		
+		&.is-open {
+			span {
+				font-weight: $font-weight-medium;
+			}
+			.icon {
+				color: $color-primary-base;
+			}
+		}
 		&:after {
 			font-family: $font-icon-family;
 			font-size: $font-size-tiny;
@@ -52,14 +59,13 @@
 }
 
 .page-actions.vertical-menu {
-	padding-left: 2rem;
 	.page-action {
 		+.page-action {
 			margin-left: 0;
 		}
 	}
 	.page-action-entry {
-		padding: 1rem 0.25rem;
+		padding: 1rem 1.75rem;
 		display: flex;
 		align-items: center;
 		line-height: 1.2;
