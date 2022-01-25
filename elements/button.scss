@@ -40,7 +40,7 @@ $button-margin: 1rem;
 	}
 }
 
-button, .button, .p-button {
+button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secondary, .secondary-outline, .secondary-inverse {
 	font-weight: $button-font-weight;
 	height: $button-height;
 	margin: 0 !important;

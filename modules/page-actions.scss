@@ -18,7 +18,7 @@
 			font-size: $font-size-tiny;
 			font-weight: 600;
 			content: '\f078';
-			color: $color-secondary-base;
+			color: $color-accent-base;
 			display: block;
 			position: absolute;
 			right: 2rem;
@@ -53,6 +53,7 @@
 		padding: 1rem 2rem 1rem $space-sm;
 		border: none;
 		border-bottom: solid 2px $color-neutral-light;
+		border-radius: 0;
 		&.is-active {
 			border-bottom-color: $color-primary-base;
 		}

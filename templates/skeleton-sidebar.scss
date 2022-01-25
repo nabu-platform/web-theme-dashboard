@@ -135,12 +135,12 @@
 				padding: 1rem 1.75rem;
 				display: flex;
 				align-items: center;
-				line-height: 1.5;
-				font-size: $font-size-base;
+				line-height: 1.25;
+				font-size: $font-size-small;
+				font-weight: $font-weight-semi-bold;
 
 				@include media('<=small') {
 					padding: 1rem;
-					line-height: 1.2;
 					font-size: $font-size-small;
 				}
 
