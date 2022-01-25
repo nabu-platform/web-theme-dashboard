@@ -9,11 +9,8 @@
 		position: relative;
 		pointer-events: all;
 		&.is-open {
-			span {
+			span:not(.icon) {
 				font-weight: $font-weight-medium;
-			}
-			.icon {
-				color: $color-primary-base;
 			}
 		}
 		&:after {
@@ -31,6 +28,10 @@
 	.page-action-entry {
 		text-decoration: none;
 		color: $color-general-black;
+
+		&:hover {
+			color: $color-primary-base;
+		}
 	}
 }
 
@@ -93,7 +94,7 @@
 
 		.icon {
 			margin-right: 1rem;
-			color: $color-secondary-dark;
+			color: $color-accent-base;
 			line-height: 1.2;
 		}
 		&.is-active,

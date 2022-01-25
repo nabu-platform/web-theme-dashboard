@@ -3,17 +3,28 @@ $button-font-weight: $font-weight-semi-bold;
 $button-line-height: 1 !important;
 $button-height: 2.25rem !important;
 $button-border-radius: 4px;
-$button-color-primary: $color-secondary-dark;
+$button-color-primary: $color-accent-base;
 $button-margin: 1rem;
 
-@mixin button-color($color) {
-	background: transparent;
-	color: $color;
-	border: 1px solid $color;
-	
+@mixin button-solid($bg, $text) {
+	background: $bg;
+	color: $text;
+
 	&:hover {
-		background: $color-secondary-light;
-		color: darken($color, 8%);
+		background: darken($bg, 5%);
+		color: $text;
+		transition: all 0.3s ease;
+	}
+}
+
+@mixin button-outline($color) {
+	color: $color;
+	box-shadow: $color 0px 0px 0px 1px inset;
+	background: transparent;
+
+	&:hover {
+		background: lighten($color, 80%);
+		color: $color;
 		transition: all 0.3s ease;
 	}
 }
@@ -36,37 +47,45 @@ button, .button, .p-button {
 	margin-bottom: $button-margin;
 	line-height: $button-line-height;
 	cursor: pointer;
-	@include button-bg($color-secondary-dark);
+	border-radius: $button-border-radius;
+	font-size: $font-size-xsmall;
 
 	&:hover {
+		* {
+			cursor: pointer;
+		}
 		transform: translate(0, 0) !important;
 	}
 	
 	&:disabled {
+		cursor: none;
 		pointer-events: none;
 	}
 
 	&.primary {
-		@include button-bg($color-secondary-dark);
-		border-radius: $button-border-radius;
-		font-size: $font-size-xsmall;
+		@include button-solid($color-primary-base, $color-primary-lightest);
+	}
+
+	&.primary-outline {
+		@include button-outline($color-primary-base);
 	}
 	
-	&.primary-with-border {
-		font-size: $font-size-small;
-		@include button-color($color-secondary-dark);
+	&.primary-inverse {
+		@include button-solid($color-primary-lightest, $color-primary-base);
 	}
 	
 	&.secondary {
-		font-size: $font-size-xsmall;
-		@include button-color($color-secondary-base);
-		border-radius: $button-border-radius;
+		@include button-solid($color-secondary-base, $color-secondary-lightest);
+	}
+
+	&.secondary-outline {
+		@include button-outline($color-secondary-base);
 	}
 	
-	&.secondary-solid {
-		@include button-bg($color-secondary-dark);
+	&.secondary-inverse {
+		@include button-solid($color-secondary-lightest, $color-secondary-base);
 	}
-	
+
 	&.inline {
 		margin: 0;
 	}

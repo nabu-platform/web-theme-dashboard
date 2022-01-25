@@ -1,25 +1,34 @@
 /// COLORS
 
 // ---------------------------------------------- brand colors
-$color-primary-light: #8ba8f0;
+$color-primary-lightest:#e8ecf8;
+$color-primary-lighter: #7696E6;
+$color-primary-light: #4973DE;
 $color-primary-base: #1C50D6;
-$color-primary-dark: #81AAB8;
-$color-primary-darkest: #00595D;
-$color-primary-gradient: linear-gradient(263.65deg, #8FBDCC 2.78%, #47AEC6 95.53%);
+$color-primary-dark: #1948C0;
+$color-primary-darker: #103080;
+$color-primary-darkest: #0E286B;
+$color-primary-gradient: linear-gradient(263.65deg, #1C50D6 2.78%, #103080 95.53%);
 
-$color-secondary-light: #F6F7FB;
-$color-secondary-base: #8A9EA8;
-$color-secondary-dark: #426177;
-$color-accent-base: #8A9EA8;
+$color-secondary-lightest: #D1EEF6;
+$color-secondary-lighter: #A4DEEE;
+$color-secondary-light: #76CDE6;
+$color-secondary-base: #1CADD6;
+$color-secondary-dark: #137995;
+$color-secondary-darker: #106780;
+$color-secondary-darkest: #0B4555;
+
+$color-accent-base: #426177;
+$color-accent-light: #8A9EA8;
 
 // ---------------------------------------------- ui colors
 $color-danger-base: #EB5757;
-$color-danger-light: rgba(235, 87, 87, 0.1);
+$color-danger-light: #F39A9A;
 $color-warning-base: #F2994A;
-$color-warning-light: rgba(242, 153, 74, 0.1);
+$color-warning-light: #F9D6B6;
 
-$color-success-light: #D8F3DE;
 $color-success-base: #30A24A;
+$color-success-light: #D8F3DE;
 
 // ---------------------------------------------- general colors
 $color-general-black: #1B191F;

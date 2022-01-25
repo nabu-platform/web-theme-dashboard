@@ -3,14 +3,14 @@ table.classic {
 	border: 1px solid $color-neutral-darker;
 
 	thead > tr {
-		background-color: $color-secondary-light;
+		background-color: $color-neutral-lightest;
 		box-shadow: inset 0px -1px 0px $color-neutral-base;
 		text-transform: uppercase;
 		line-height: 2;
 		
 		th {
 			padding: .75rem;
-			color: $color-secondary-dark;
+			color: $color-accent-base;
 			font-size: $font-size-tiny;
 			white-space: nowrap;
 			text-align: left;
@@ -80,15 +80,13 @@ table.classic {
 						white-space: nowrap;
 						
 						.fa {
-							color: $color-general-black;
+							color: inherit;
 							font-size: $font-size-tiny;
 						}
 						
 						&:hover {
-							color: $color-primary-base;
-							
 							.fa {
-								color: $color-primary-base;
+								color: inherit;
 							}
 						}
 					}

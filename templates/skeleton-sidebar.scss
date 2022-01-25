@@ -111,6 +111,7 @@
 		}
 		
 		.page-actions, .page-actions.vertical-menu {
+			margin: 0;
 			.page-action {
 				+.page-action {
 					margin-left: 0;
@@ -134,10 +135,17 @@
 				padding: 1rem 1.75rem;
 				display: flex;
 				align-items: center;
-				line-height: 1.2;
+				line-height: 1.5;
+				font-size: $font-size-base;
 
 				@include media('<=small') {
 					padding: 1rem;
+					line-height: 1.2;
+					font-size: $font-size-small;
+				}
+
+				&:hover {
+					background: $color-primary-lightest;
 				}
 			
 				.icon {
