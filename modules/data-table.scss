@@ -196,6 +196,11 @@ table.selectable {
 				margin-right: $space-xs;
 				max-width: 30rem;
 			}
+			.filter-field {
+				.n-form-component {
+					margin: 0;
+				}
+			}
 		}
 	}
 
