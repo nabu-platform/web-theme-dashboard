@@ -11,7 +11,7 @@
 			},
 			"font-awesome-pro.json": {
 			 	"type": "bundle",
-				"url": "font-awesome-pro.json"
+				"url": "https://raw.githubusercontent.com/nabu-platform/web-theme-fontawesome-pro/main/font-awesome-pro.json"
 			}
         },
 		"pre-configuration.json": {
