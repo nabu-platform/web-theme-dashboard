@@ -3,7 +3,6 @@ $button-font-weight: $font-weight-semi-bold;
 $button-line-height: 1 !important;
 $button-height: 2.25rem !important;
 $button-border-radius: 4px;
-$button-color-primary: $color-accent-base;
 $button-margin: 1rem;
 
 @mixin button-solid($bg, $text) {
@@ -29,18 +28,8 @@ $button-margin: 1rem;
 	}
 }
 
-@mixin button-bg($color) {
-	background: $color;
-	color: $color-general-white;
-	border: 1px solid $color-general-white;
-	
-	&:hover {
-		background: darken($color, 5%);
-		transition: all 0.3s ease;
-	}
-}
-
-button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secondary, .secondary-outline, .secondary-inverse {
+button, .button, .p-button,
+.primary, .primary-outline, .primary-inverse, .secondary, .secondary-outline, .secondary-inverse {
 	font-weight: $button-font-weight;
 	height: $button-height;
 	margin: 0 !important;
@@ -48,7 +37,7 @@ button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secon
 	line-height: $button-line-height;
 	cursor: pointer;
 	border-radius: $button-border-radius;
-	font-size: $font-size-xsmall;
+	font-size: $button-font-size !important;
 
 	&:hover {
 		* {
@@ -61,7 +50,12 @@ button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secon
 		cursor: none;
 		pointer-events: none;
 	}
+}
 
+button,
+.p-button,
+.page-action-button,
+.page-action-entry {
 	&.primary {
 		@include button-solid($color-primary-base, $color-primary-lightest);
 	}
@@ -89,8 +83,13 @@ button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secon
 	&.inline {
 		margin: 0;
 	}
+
+	&.rounded {
+		border-radius: 100px;
+	}
 	
-	&.has-icon {
+	&.has-icon,
+	&.has-icon-right {
 		height: $button-height;
 		padding: 0 1.5rem !important;
 		font-weight: $button-font-weight;
@@ -98,6 +97,8 @@ button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secon
 
 		.icon, .fa {
 			margin-right: $space-sm;
+			font-size: $font-size-base;
+			color: inherit !important;
 		}
 	}
 	
@@ -110,10 +111,17 @@ button, .button, .p-button, .primary, .primary-outline, .primary-inverse, .secon
 	
 	&.is-icon,
 	&.icon-only {
+		padding: 0;
+		width: 2.5rem;
+		height: 2.5rem !important;
+		
 		.icon {
 			left: 50%;
+			top: 50%;
 			margin: 0;
     		transform: translate(-50%, -50%);
+			font-size: $font-size-base;
+			color: inherit !important;
 		}
 	}
 }

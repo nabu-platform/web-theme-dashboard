@@ -1,44 +1,44 @@
 /// COLORS
 
 // ---------------------------------------------- brand colors
-$color-primary-lightest:#e8ecf8;
-$color-primary-lighter: #7696E6;
-$color-primary-light: #4973DE;
-$color-primary-base: #1C50D6;
-$color-primary-dark: #1948C0;
-$color-primary-darker: #103080;
-$color-primary-darkest: #0E286B;
-$color-primary-gradient: linear-gradient(263.65deg, #1C50D6 2.78%, #103080 95.53%);
+$color-primary-lightest:#e8ecf8 !default;
+$color-primary-lighter: #7696E6 !default;;
+$color-primary-light: #4973DE !default;
+$color-primary-base: #1C50D6 !default;
+$color-primary-dark: #1948C0 !default;
+$color-primary-darker: #103080 !default;
+$color-primary-darkest: #0E286B !default;
+$color-primary-gradient: linear-gradient(263.65deg, #1C50D6 2.78%, #103080 95.53%) !default;
 
-$color-secondary-lightest: #D1EEF6;
-$color-secondary-lighter: #A4DEEE;
-$color-secondary-light: #76CDE6;
-$color-secondary-base: #1CADD6;
-$color-secondary-dark: #137995;
-$color-secondary-darker: #106780;
-$color-secondary-darkest: #0B4555;
+$color-secondary-lightest: #D1EEF6 !default;
+$color-secondary-lighter: #A4DEEE !default;
+$color-secondary-light: #76CDE6 !default;
+$color-secondary-base: #1CADD6 !default;
+$color-secondary-dark: #137995 !default;
+$color-secondary-darker: #106780 !default;
+$color-secondary-darkest: #0B4555 !default;
 
-$color-accent-base: #426177;
-$color-accent-light: #8A9EA8;
+$color-accent-base: #426177 !default;
+$color-accent-light: #8A9EA8 !default;
 
 // ---------------------------------------------- ui colors
-$color-danger-base: #EB5757;
-$color-danger-light: #F39A9A;
-$color-warning-base: #F2994A;
-$color-warning-light: #F9D6B6;
+$color-danger-base: #EB5757 !default;
+$color-danger-light: #F39A9A !default;
+$color-warning-base: #F2994A !default;
+$color-warning-light: #F9D6B6 !default;
 
-$color-success-base: #30A24A;
-$color-success-light: #D8F3DE;
+$color-success-base: #30A24A !default;
+$color-success-light: #D8F3DE !default;
 
 // ---------------------------------------------- general colors
-$color-general-black: #1B191F;
-$color-general-white: #FFFFFF;
+$color-general-black: #1B191F !default;
+$color-general-white: #FFFFFF !default;
 
 // ---------------------------------------------- neutral colors
-$color-neutral-lightest: #F6F7FB;
-$color-neutral-lighter: #F7F7F7;
-$color-neutral-light: #DCDCDC;
-$color-neutral-base: #CBD5E1;
-$color-neutral-dark: #b6bfca;
-$color-neutral-darker: #a2aab4;	
-$color-neutral-darkest: #8e959d;
+$color-neutral-lightest: #F6F7FB !default;
+$color-neutral-lighter: #F7F7F7 !default;
+$color-neutral-light: #DCDCDC !default;
+$color-neutral-base: #CBD5E1 !default;
+$color-neutral-dark: #b6bfca !default;
+$color-neutral-darker: #a2aab4 !default;	
+$color-neutral-darkest: #8e959d !default;
