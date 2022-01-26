@@ -28,7 +28,7 @@
 	}
 	.page-action-entry {
 		text-decoration: none;
-		color: $color-general-black;
+		color: inherit;
 
 		&:hover {
 			color: $color-primary-base;
@@ -99,6 +99,8 @@
 			color: $color-accent-base;
 			line-height: 1.2;
 		}
+	}
+	a.page-action-entry {
 		&.is-active,
 		&.is-active-language {
 			font-weight: $font-weight-medium;

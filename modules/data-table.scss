@@ -178,10 +178,14 @@ table.selectable {
 
 .data-common-header {
 	margin: 0;
-	
+	.refresh-button {
+		padding: 0.25rem;
+    	background: $color-neutral-lightest;
+    	margin-bottom: 0.25rem;
+	}
 	.n-form.filter {
 		.n-form-component {
-			margin: 0;
+			margin: 0 !important;
 		}
 		section.n-form-content {
 			display: flex;

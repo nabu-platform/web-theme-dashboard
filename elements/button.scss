@@ -5,6 +5,36 @@ $button-height: 2.25rem !important;
 $button-border-radius: 4px;
 $button-margin: 1rem;
 
+@mixin button-base {
+	font-weight: $button-font-weight;
+	height: $button-height;
+	margin: 0 !important;
+	margin-bottom: $button-margin;
+	line-height: $button-line-height;
+	cursor: pointer;
+	border-radius: $button-border-radius;
+	font-size: $button-font-size !important;
+	&:hover {
+		* {
+			cursor: pointer;
+		}
+		transform: translate(0, 0) !important;
+	}
+	&:disabled {
+		cursor: none;
+		pointer-events: none;
+	}
+	.icon {
+		margin-right: $space-sm;
+		font-size: $font-size-base;
+		color: inherit !important;
+		position: relative;
+		transform: none;
+		top: auto;
+		left: auto;
+	}
+}
+
 @mixin button-solid($bg, $text) {
 	background: $bg;
 	color: $text;
@@ -28,34 +58,9 @@ $button-margin: 1rem;
 	}
 }
 
-button, .button, .p-button,
-.primary, .primary-outline, .primary-inverse, .secondary, .secondary-outline, .secondary-inverse {
-	font-weight: $button-font-weight;
-	height: $button-height;
-	margin: 0 !important;
-	margin-bottom: $button-margin;
-	line-height: $button-line-height;
-	cursor: pointer;
-	border-radius: $button-border-radius;
-	font-size: $button-font-size !important;
-
-	&:hover {
-		* {
-			cursor: pointer;
-		}
-		transform: translate(0, 0) !important;
-	}
+button, .p-button, .button, %button {
+	@include button-base;
 	
-	&:disabled {
-		cursor: none;
-		pointer-events: none;
-	}
-}
-
-button,
-.p-button,
-.page-action-button,
-.page-action-entry {
 	&.primary {
 		@include button-solid($color-primary-base, $color-primary-lightest);
 	}
@@ -99,10 +104,16 @@ button,
 			margin-right: $space-sm;
 			font-size: $font-size-base;
 			color: inherit !important;
+			position: relative;
+			transform: none;
+			top: auto;
+			left: auto;
 		}
 	}
 	
 	&.has-icon-right {
+		flex-direction: row-reverse;
+		
 		.icon, .fa {
 			margin-right: 0;
 			margin-left: $space-sm;

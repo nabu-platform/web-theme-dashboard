@@ -1,4 +1,5 @@
-.n-form {
+.n-form,
+.nabu-form-component {
 	.n-form-component {
 		min-width: initial;
 		margin-bottom: $space-base;
@@ -241,6 +242,7 @@
 
 .n-form-section.row {
 	align-items: flex-start;
+	justify-content: flex-start;
 }
 
 .has-title {
