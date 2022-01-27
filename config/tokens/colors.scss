@@ -1,22 +1,22 @@
 /// COLORS
 
 // ---------------------------------------------- brand colors
-$color-primary-lightest: lighten($color-primary-base, 15%) !default;
-$color-primary-lighter: lighten($color-primary-base, 10%) !default;;
-$color-primary-light: lighten($color-primary-base, 5%) !default;
+$color-primary-lightest: lighten(#0052CC, 15%) !default;
+$color-primary-lighter: lighten(#0052CC, 10%) !default;;
+$color-primary-light: lighten(#0052CC, 5%) !default;
 $color-primary-base: #0052CC !default;
-$color-primary-dark: darken($color-primary-base, 5%) !default;
-$color-primary-darker: darken($color-primary-base, 10%) !default;
-$color-primary-darkest: darken($color-primary-base, 15%)!default;
-$color-primary-gradient: linear-gradient(263.65deg, $color-primary-base 2.78%, $color-primary-darkest 95.53%) !default;
+$color-primary-dark: darken(#0052CC, 5%) !default;
+$color-primary-darker: darken(#0052CC, 10%) !default;
+$color-primary-darkest: darken(#0052CC, 15%)!default;
+$color-primary-gradient: linear-gradient(263.65deg, #0052CC 2.78%, $color-primary-darkest 95.53%) !default;
 
-$color-secondary-lightest: lighten($color-secondary-base, 15%)  !default;
-$color-secondary-lighter: lighten($color-secondary-base, 10%)  !default;
-$color-secondary-light: lighten($color-secondary-base, 5%) !default;
+$color-secondary-lightest: lighten(#42526E, 15%)  !default;
+$color-secondary-lighter: lighten(#42526E, 10%)  !default;
+$color-secondary-light: lighten(#42526E, 5%) !default;
 $color-secondary-base: #42526E !default;
-$color-secondary-dark: darken($color-secondary-base, 5%) !default;
-$color-secondary-darker: darken($color-secondary-base, 10%) !default;
-$color-secondary-darkest: darken($color-secondary-base, 15%) !default;
+$color-secondary-dark: darken(#42526E, 5%) !default;
+$color-secondary-darker: darken(#42526E, 10%) !default;
+$color-secondary-darkest: darken(#42526E, 15%) !default;
 
 $color-accent-base: #426177 !default;
 $color-accent-light: #8A9EA8 !default;
