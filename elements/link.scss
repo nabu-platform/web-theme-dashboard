@@ -31,7 +31,6 @@ a, .p-link, %link {
 
 	&.secondary {
         color: $color-secondary-base;
-		@include button-solid($color-secondary-base, $color-secondary-lightest);
 	}
 
 	&.previous {
