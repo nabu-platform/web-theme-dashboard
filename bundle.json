@@ -97,6 +97,9 @@
 			"button.scss": {
 				"url": "elements/button.scss"
 			},
+			"link.scss": {
+				"url": "elements/link.scss"
+			},
 			"line-data.scss": {
 				"url": "elements/line-data.scss"
 			},

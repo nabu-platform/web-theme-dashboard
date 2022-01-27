@@ -10,8 +10,9 @@
 			.n-form-label {
 				font-size: $font-size-xsmall;	
 				font-weight: $font-weight-semi-bold;
-				color: $color-neutral-black !important;
-				margin-bottom: .5rem !important;
+				line-height: 16px;
+				color: $color-neutral-darkest !important;
+				margin: 0;
 				padding: 0 !important;
 			}
 			
@@ -28,11 +29,12 @@
 			.field {
 				color: $color-neutral-black;
 				font-size: $font-size-small;
-				border: 1px solid $color-neutral-base;
+				line-height: 20px;
+				background-color: $color-neutral-light;
+				border: 1px solid $color-neutral-light;
 				outline: none !important;
-				border-radius: 2px;
+				border-radius: 3px;
 				height: 2.5rem;
-				line-height: 2.5rem;
 				
 				&:focus-visible,
 				&:focus {
@@ -110,6 +112,8 @@
 	}
 	
 	.n-form-combo {
+		max-width: 20rem;
+
 		.n-input-combo {
 			.n-input-combo-input-container {
 				.n-input-combo-input {
@@ -210,6 +214,84 @@
 					.span.n-input-date-selected {
 						background-color: $color-primary-light !important; 
 					}
+				}
+			}
+		}
+	}
+
+	.dynamic-input {
+		display: flex;
+
+		.dynamic-input-contents {
+			.dynamic-input-iteration {
+				margin-bottom: 0.75rem;
+				background-color: $color-neutral-light;
+				border-radius: 3px;
+				padding: 1rem;
+				position: relative;
+
+				> span.fa {
+					position: absolute;
+					top: .75rem;
+					right: .75rem;
+				}
+			}
+		}
+		.dynamic-input-actions {
+			margin-left: 1.5rem;
+		}
+	}
+}
+
+.n-form-qr {
+	.n-form-qr-container {
+		text-align: center; 
+
+		.n-form-canvas-container {
+			position: relative;
+			display: inline-block; 
+		}
+
+		.overlay {
+			border: dashed 1px #ccc;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.n-form-qr-retry {
+				@include button-solid($color-primary-base, $color-primary-lightest);
+			}
+		}
+	}
+
+	.n-form-qr-code {
+		.actions {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			.n-form-qr-retry {
+				@include button-solid($color-primary-lightest, $color-primary-base);
+			}
+		}
+	}
+
+	.n-form-text {
+		margin-top: 1rem;
+	}
+
+	&.n-form-qr-scanned {
+		.n-form-qr-container {
+			.overlay {
+				border: none;
+				background-color: rgba(55, 55, 55, 0.6); 
+				.n-form-qr-retry {
+					background-color: rgba(200, 200, 200, 0.8); 
 				}
 			}
 		}

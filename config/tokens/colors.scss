@@ -1,22 +1,22 @@
 /// COLORS
 
 // ---------------------------------------------- brand colors
-$color-primary-lightest:#e8ecf8 !default;
-$color-primary-lighter: #7696E6 !default;;
-$color-primary-light: #4973DE !default;
-$color-primary-base: #1C50D6 !default;
-$color-primary-dark: #1948C0 !default;
-$color-primary-darker: #103080 !default;
-$color-primary-darkest: #0E286B !default;
-$color-primary-gradient: linear-gradient(263.65deg, #1C50D6 2.78%, #103080 95.53%) !default;
+$color-primary-lightest: lighten($color-primary-base, 15%) !default;
+$color-primary-lighter: lighten($color-primary-base, 10%) !default;;
+$color-primary-light: lighten($color-primary-base, 5%) !default;
+$color-primary-base: #0052CC !default;
+$color-primary-dark: darken($color-primary-base, 5%) !default;
+$color-primary-darker: darken($color-primary-base, 10%) !default;
+$color-primary-darkest: darken($color-primary-base, 15%)!default;
+$color-primary-gradient: linear-gradient(263.65deg, $color-primary-base 2.78%, $color-primary-darkest 95.53%) !default;
 
-$color-secondary-lightest: #D1EEF6 !default;
-$color-secondary-lighter: #A4DEEE !default;
-$color-secondary-light: #76CDE6 !default;
-$color-secondary-base: #1CADD6 !default;
-$color-secondary-dark: #137995 !default;
-$color-secondary-darker: #106780 !default;
-$color-secondary-darkest: #0B4555 !default;
+$color-secondary-lightest: lighten($color-secondary-base, 15%)  !default;
+$color-secondary-lighter: lighten($color-secondary-base, 10%)  !default;
+$color-secondary-light: lighten($color-secondary-base, 5%) !default;
+$color-secondary-base: #42526E !default;
+$color-secondary-dark: darken($color-secondary-base, 5%) !default;
+$color-secondary-darker: darken($color-secondary-base, 10%) !default;
+$color-secondary-darkest: darken($color-secondary-base, 15%) !default;
 
 $color-accent-base: #426177 !default;
 $color-accent-light: #8A9EA8 !default;
@@ -31,14 +31,14 @@ $color-success-base: #30A24A !default;
 $color-success-light: #D8F3DE !default;
 
 // ---------------------------------------------- general colors
-$color-general-black: #1B191F !default;
+$color-general-black: #172b4d !default;
 $color-general-white: #FFFFFF !default;
 
 // ---------------------------------------------- neutral colors
 $color-neutral-lightest: #F6F7FB !default;
 $color-neutral-lighter: #F7F7F7 !default;
-$color-neutral-light: #DCDCDC !default;
+$color-neutral-light: #F4F5F7 !default;
 $color-neutral-base: #CBD5E1 !default;
 $color-neutral-dark: #b6bfca !default;
 $color-neutral-darker: #a2aab4 !default;	
-$color-neutral-darkest: #8e959d !default;
+$color-neutral-darkest: #5e6c84 !default;

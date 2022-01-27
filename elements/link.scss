@@ -1,0 +1,49 @@
+$link-font-size: $font-size-small;
+
+@mixin link-base {
+	font-family: $font-family;
+	cursor: pointer;
+	font-size: $link-font-size !important;
+    text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	.icon {
+		margin-right: $space-sm;
+		font-size: $font-size-base;
+		color: inherit !important;
+		position: relative;
+		transform: none;
+		top: auto;
+		left: auto;
+	}
+}
+
+
+a, .p-link, %link {
+	@include link-base;
+	
+	&.primary {
+        color: $color-primary-base;
+	}
+
+	&.secondary {
+        color: $color-secondary-base;
+		@include button-solid($color-secondary-base, $color-secondary-lightest);
+	}
+
+	&.previous {
+		color: $color-primary-base;
+	}
+	
+	&.has-icon-right {
+		flex-direction: row-reverse;
+		
+		.icon, .fa {
+			margin-right: 0;
+			margin-left: $space-sm;
+		}
+	}
+}

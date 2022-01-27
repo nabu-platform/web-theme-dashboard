@@ -2,10 +2,12 @@ $button-font-size: $font-size-small;
 $button-font-weight: $font-weight-semi-bold;
 $button-line-height: 1 !important;
 $button-height: 2.25rem !important;
-$button-border-radius: 4px;
+$button-border-radius: 3px;
 $button-margin: 1rem;
 
 @mixin button-base {
+	appearance: none;
+	font-family: $font-family;
 	font-weight: $button-font-weight;
 	height: $button-height;
 	margin: 0 !important;
@@ -14,6 +16,9 @@ $button-margin: 1rem;
 	cursor: pointer;
 	border-radius: $button-border-radius;
 	font-size: $button-font-size !important;
+	border: none;
+	padding: 0 1.5rem;
+
 	&:hover {
 		* {
 			cursor: pointer;
@@ -58,7 +63,7 @@ $button-margin: 1rem;
 	}
 }
 
-button, .p-button, .button, %button {
+button, .p-button, .button, .n-form-qr-retry, %button {
 	@include button-base;
 	
 	&.primary {
