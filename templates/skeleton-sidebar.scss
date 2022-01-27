@@ -10,7 +10,8 @@
 .skeleton-sidebar {
 	/// 1.	PAGE-SIDEBAR
 	.page-sidebar {
-		background: $color-neutral-lightest;
+		background: $color-general-white;
+		border-right: 1px solid $color-primary-lightest;
 		width: 260px;
 		max-width: 260px;
 		height: 100vh;
@@ -38,7 +39,7 @@
 		height: 80px;
 		display: flex;
 		align-items: center;
-		border-bottom: 1px solid $color-neutral-light;
+		border-bottom: 1px solid $color-primary-lightest;
 	
 		@include media('<=small') {
 			min-height: 60px;
@@ -105,7 +106,7 @@
 	.page-sidebar-nav {
 		height: calc(100vh - 80px);
 		flex-basis: auto !important;
-		
+
 		@include media('<=small') {
 			height: calc(100vh - 60px);
 		}
@@ -222,7 +223,7 @@
 			padding-left: 1.5rem;
 			padding-right: 1.5rem;
 			width: 100%;
-			background: $color-general-white;
+			background: #f6f9fc;
 			min-height: 100vh;
 			flex-grow: unset !important;
 			flex-basis: auto !important;

@@ -21,7 +21,7 @@
 			.n-form-label {
 				font-size: $font-size-xsmall;	
 				font-weight: $font-weight-semi-bold;
-				line-height: 16px;
+				line-height: 1.8;
 				color: $color-neutral-darkest !important;
 				margin: 0;
 				padding: 0 !important;
@@ -41,8 +41,8 @@
 				color: $color-neutral-black;
 				font-size: $font-size-small;
 				line-height: 20px;
-				background-color: $color-neutral-light;
-				border: 1px solid $color-neutral-light;
+				background-color: $color-neutral-lightest;
+				border: 1px solid $color-neutral-base;
 				outline: none !important;
 				border-radius: 3px;
 				height: 2.5rem;
@@ -53,10 +53,10 @@
 				}
 				&.n-form-invalid {
 					color: $color-neutral-black;
-					border: 1px solid $color-neutral-base;
+					border: 1px solid $color-danger-base;
 				}
 				&.n-form-valid {
-					
+					border: 1px solid $color-neutral-base;
 				}
 			}
 			
@@ -92,34 +92,32 @@
 			}
 		}
 		
-	
-		
-		.field.n-form-invalid ~ .n-icon {
-			
+		.n-messages {
+			.n-message {
+				padding: 0;
+				margin: 0.25rem 0;
+			}
 		}
-
+	
 		.n-form-component-after {
 			margin: 0;
 			margin-top: .125rem;
-			font-size: $font-size-tiny;
-			
-			.icon {
-				
-			}
-			.n-form-component-after-label {
-				
-			}
+		}
+	}
+		
+	.n-form-switch.n-form-checkbox {
+		label.n-form-label:after,
+		label.n-form-label:before {
+			border-radius: 100px;
 		}
 		
-		.n-messages {
-			
-			.n-message {
-				
-				.title {
-					
-				}
-			}
+		label.n-form-label:before {
+			box-shadow: inset 0 0 0 1px $color-accent-light !important;
 		}
+	}
+	
+	.n-form-text-number {
+		max-width: 20rem;
 	}
 	
 	.n-form-combo {
@@ -147,6 +145,9 @@
 					font-weight: $font-weight;
 				}
 				.n-input-combo-dropdown {
+					top: 100%;
+					border-radius: 3px;
+					
 					.n-input-combo-dropdown-value {
 						background-color: $color-neutral-white;
 						color: $color-neutral-black;
@@ -154,6 +155,10 @@
 						&.pondering {
 							background-color: $color-neutral-white;
 							color: $color-neutral-black;
+						}
+						
+						&:hover {
+							background-color: $color-neutral-lightest;
 						}
 						
 						&.active {
@@ -232,29 +237,36 @@
 
 	.dynamic-input {
 		display: flex;
+		margin-bottom: 0;
 
 		.dynamic-input-contents {
+			display: flex;
+			
 			.dynamic-input-iteration {
 				margin-bottom: 0.75rem;
-				background-color: $color-neutral-light;
+				background-color: transparent;
 				border-radius: 3px;
-				padding: 1rem;
+				margin-right: 1rem;
+				padding: 0;
 				position: relative;
 
 				> span.fa {
 					position: absolute;
-					top: .75rem;
-					right: .75rem;
+					font-size: $font-size-base;
+					top: .5rem;
+					right: .5rem;
 				}
 			}
 		}
 		.dynamic-input-actions {
-			margin-left: 1.5rem;
+		
 		}
 	}
+	
 }
 
 .n-form-qr {
+	position: relative;
 	.n-form-qr-container {
 		text-align: center; 
 
@@ -264,7 +276,7 @@
 		}
 
 		.overlay {
-			border: dashed 1px #ccc;
+			border: dashed 1px $color-neutral-base;
 			display: block;
 			position: absolute;
 			top: 0;
@@ -272,14 +284,25 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			width: 100%;
 
 			.n-form-qr-retry {
+				padding: 0 1rem;
 				@include button-solid($color-primary-base, $color-primary-lightest);
 			}
 		}
 	}
 
 	.n-form-qr-code {
+		text-align: left;
+		width: 100% !important;
+		min-width: 250px;
+		height: auto !important;
+		
+		img {
+			max-height: 100%;
+			max-width: 100%;
+		}
 		.actions {
 			position: absolute;
 			top: 50%;
@@ -287,6 +310,7 @@
 			transform: translate(-50%, -50%);
 
 			.n-form-qr-retry {
+				padding: 0 1rem;
 				@include button-solid($color-primary-lightest, $color-primary-base);
 			}
 		}
@@ -297,12 +321,16 @@
 	}
 
 	&.n-form-qr-scanned {
-		.n-form-qr-container {
-			.overlay {
-				border: none;
-				background-color: rgba(55, 55, 55, 0.6); 
-				.n-form-qr-retry {
-					background-color: rgba(200, 200, 200, 0.8); 
+		.n-form-qr-code {
+			border: dashed 1px $color-neutral-base;
+
+			.actions {
+				top: 2rem;
+				left: 2rem;
+				transform: none;
+				
+				button {
+					@include button-solid($color-primary-lightest, $color-secondary-base);
 				}
 			}
 		}
@@ -353,6 +381,7 @@
 	h2 {
 		font-family: $font-family;
 		font-size: $font-size-large;
+		color: $color-general-black;
 		margin-bottom: 1.5rem;
 		font-weight: $font-weight-medium;
 	}

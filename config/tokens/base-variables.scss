@@ -5,14 +5,23 @@ $container-max-width: 85rem;
 
 $font-icon-family:      "Font Awesome 5 Pro" !important;
 $font-icon-weight:      normal;
-$font-family:	          "Open Sans", sans-serif;
-$font-family-alt:       "Roboto", sans-serif;
-$font-weight:           400;
+$font-family:	          museo-sans, sans-serif;
+$font-family-alt:       museo-sans-condensed, sans-serif;
+$font-family-heading: 	$font-family;
+$font-weight:           300;
 $font-weight-light:     300;
 $font-weight-medium:    500;
-$font-weight-semi-bold: 600;
+$font-weight-semi-bold: 700;
 $font-weight-emphasis:  700;
 $font-weight-bold:      900;
+
+$font-size-heading1: 	  2rem;
+$font-size-heading2: 	  1.5rem;
+$font-size-heading3: 	  1.25rem;
+$font-size-heading4: 	  1rem;
+$font-size-heading5: 	  1rem;
+$font-size-heading6: 	  1rem;
+$font-size-heading7: 	  1rem;
 
 // ---------------------------------------------- spacing
 $space-base: 	1rem;

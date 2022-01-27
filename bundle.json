@@ -3,6 +3,9 @@
 	"version": "1.2",
 	"resources": {
 		 "fonts": {
+			"typekit.css": {
+				"url": "https://use.typekit.net/yco5fxa.css"
+			},
 			"open-sans.css": {
 				"url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700"
 			},
@@ -82,6 +85,9 @@
 			},
 			"page-chart.scss": {
 				"url": "modules/page-chart.scss"
+			},
+			"page-wizard.scss": {
+				"url": "modules/page-wizard.scss"
 			},
 			"page-prompt.scss": {
 				"url": "modules/page-prompt.scss"

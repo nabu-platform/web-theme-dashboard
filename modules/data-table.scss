@@ -1,9 +1,10 @@
 table.classic {
 	width: 100%;
 	border: 1px solid $color-neutral-darker;
+	background: $color-general-white;
 
 	thead > tr {
-		background-color: $color-neutral-lightest;
+		background-color: $color-neutral-lighter;
 		box-shadow: inset 0px -1px 0px $color-neutral-base;
 		text-transform: uppercase;
 		line-height: 2;
@@ -78,6 +79,7 @@ table.classic {
 						line-height: 1.75rem !important;
 						cursor: pointer;
 						white-space: nowrap;
+						font-size: $font-size-xsmall !important;
 						
 						.fa {
 							color: inherit;

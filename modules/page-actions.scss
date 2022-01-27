@@ -31,6 +31,11 @@
 		color: inherit;
 
 		&:hover {
+			text-decoration: none;
+			color: $color-primary-base;
+		}
+		
+		&.is-active {
 			color: $color-primary-base;
 		}
 	}
@@ -50,13 +55,15 @@
 		height: auto !important;
 		line-height: 1.2 !important;
 		display: block;
+		color: $color-neutral-darkest;
 		background-color: transparent;
-		padding: 1rem 2rem 1rem $space-sm;
+		padding: 1rem 2rem;
 		border: none;
 		border-bottom: solid 2px $color-neutral-light;
 		border-radius: 0;
 		&.is-active {
 			border-bottom-color: $color-primary-base;
+			color: $color-general-black;
 		}
 	}
 }

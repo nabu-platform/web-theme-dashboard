@@ -1,5 +1,5 @@
 $button-font-size: $font-size-small;
-$button-font-weight: $font-weight-semi-bold;
+$button-font-weight: $font-weight-emphasis;
 $button-line-height: 1 !important;
 $button-height: 2.25rem !important;
 $button-border-radius: 3px;
@@ -8,7 +8,7 @@ $button-margin: 1rem;
 @mixin button-base {
 	appearance: none;
 	font-family: $font-family;
-	font-weight: $button-font-weight;
+	font-weight: $button-font-weight !important;
 	height: $button-height;
 	margin: 0 !important;
 	margin-bottom: $button-margin;
@@ -79,7 +79,7 @@ button, .p-button, .button, .n-form-qr-retry, %button {
 	}
 	
 	&.secondary {
-		@include button-solid($color-secondary-base, $color-secondary-lightest);
+		@include button-solid($color-secondary-base, $color-general-white);
 	}
 
 	&.secondary-outline {
@@ -87,7 +87,19 @@ button, .p-button, .button, .n-form-qr-retry, %button {
 	}
 	
 	&.secondary-inverse {
-		@include button-solid($color-secondary-lightest, $color-secondary-base);
+		@include button-solid($color-neutral-lightest, $color-secondary-base);
+	}
+	
+	&.tertiary {
+		@include button-solid($color-tertiary-base, $color-general-white);
+	}
+	
+	&.tertiary-outline {
+		@include button-outline($color-tertiary-base);
+	}
+	
+	&.tertiary-inverse {
+		@include button-solid($color-neutral-lightest, $color-tertiary-base);
 	}
 
 	&.inline {
