@@ -80,6 +80,10 @@ table.classic {
 						cursor: pointer;
 						white-space: nowrap;
 						font-size: $font-size-xsmall !important;
+
+						&.primary {
+							@include button-solid($color-secondary-base, $color-general-white);
+						}
 						
 						.fa {
 							color: inherit;

@@ -1,0 +1,57 @@
+// SKELETON FIXED HEADER
+/// 1. 	PAGE-MAIN-VIEW
+/// 1A.	PAGE-TOP-HEADER
+/// 1B.	PAGE-CONTENT
+
+.skeleton-fixed-header {
+	.page-main-view {
+		.page-top-header {
+			min-height: 68px;
+			height: 68px;
+			border-bottom: 1px solid $color-neutral-light;
+			position: fixed;
+			top: 0;
+			background: $color-general-white;
+			right: 0;
+			left: 0;
+			z-index: 10;
+
+			@include media('<=small') {
+				min-height: 58px;
+				height: 58px;
+			}
+			
+			.page-heading {
+				font-size: $font-size-large;
+				font-weight: $font-weight-semi-bold;
+				display: flex;
+				color: $color-accent-base;
+				align-items: center;
+				justify-content: center;
+				
+				@include media('<=small') {
+					font-size: $font-size-small;
+				}
+			}
+			
+			.page-nav {
+				flex-grow: unset!important;
+			}
+		}
+		
+		.page-content {
+			height: 100%;
+			padding-top: 68px;
+			width: 100%;
+			background: $color-neutral-lightest;
+			min-height: 100vh;
+			flex-grow: unset !important;
+			flex-basis: auto !important;
+	
+			@include media('<=small') {
+				padding-top: 58px;
+			}
+		}
+	}
+}
+

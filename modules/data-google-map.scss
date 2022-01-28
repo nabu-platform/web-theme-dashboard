@@ -13,27 +13,24 @@
 	}
 	.google-data-map {
 		min-height: 75vh;
-	}
-}
-
-.google-data-map {
-	button {
-		top: 0 !important;
-		right: 0 !important;
-	}
-	.page-field {
-		+.page-field {
-			margin-top: 0.75rem;
+		button {
+			top: 0 !important;
+			right: 0 !important;
 		}
-	}
-	dl {
-		dt {
-			font-weight: $font-weight-medium;
-			color: $color-neutral-dark;
-			margin-bottom: $space-xs;
+		.page-field {
+			+.page-field {
+				margin-top: 0.75rem;
+			}
 		}
-		dd {
-			color: $color-general-black;
+		dl {
+			dt {
+				font-weight: $font-weight-medium;
+				color: $color-neutral-dark;
+				margin-bottom: $space-xs;
+			}
+			dd {
+				color: $color-general-black;
+			}
 		}
 	}
 }

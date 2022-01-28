@@ -60,6 +60,9 @@
 			"skeleton-sidebar.scss": {
 				"url": "templates/skeleton-sidebar.scss"
 			},
+			"skeleton-fixed-header.scss": {
+				"url": "templates/skeleton-fixed-header.scss"
+			},
 			"skeleton-guest.scss": {
 				"url": "templates/skeleton-guest.scss"
 			}
