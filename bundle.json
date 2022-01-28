@@ -32,7 +32,7 @@
         "web-plato.json": {
             "type": "bundle",
             "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/bundle.json",
-            "excludes": ["tokens/color"]
+            "excludes": ["tokens/color", "elements/button"]
         },
         "extras": {
             "theme-mapping.json": {
