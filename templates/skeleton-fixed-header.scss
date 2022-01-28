@@ -27,15 +27,17 @@
 				display: flex;
 				color: $color-accent-base;
 				align-items: center;
-				justify-content: center;
 				
 				@include media('<=small') {
 					font-size: $font-size-small;
 				}
 			}
 			
-			.page-nav {
+			.page-nav,
+			.page-heading,
+			.page-back-button {
 				flex-grow: unset!important;
+				flex-basis: auto;
 			}
 		}
 		

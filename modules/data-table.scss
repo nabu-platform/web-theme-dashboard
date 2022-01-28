@@ -81,10 +81,6 @@ table.classic {
 						white-space: nowrap;
 						font-size: $font-size-xsmall !important;
 
-						&.primary {
-							@include button-solid($color-secondary-base, $color-general-white);
-						}
-						
 						.fa {
 							color: inherit;
 							font-size: $font-size-tiny;

@@ -104,7 +104,27 @@
 			margin-top: .125rem;
 		}
 	}
+
+	.n-form-radio, .n-form-checkbox {
+		label {
+			padding-left: 1.75rem !important;
+			min-height: 1.25rem;
+			line-height: 1.5;
 		
+			&:before {
+				margin-left: 0;
+				width: 1.25rem;
+				height: 1.25rem;
+				border-radius: 3px;
+				box-shadow: 0 0 0 1px $color-neutral-base inset;
+			}
+			
+			&:after {
+				margin-left: 0.125rem;
+			}
+		}
+	}
+
 	.n-form-switch.n-form-checkbox {
 		label.n-form-label:after,
 		label.n-form-label:before {
@@ -259,7 +279,12 @@
 			}
 		}
 		.dynamic-input-actions {
-		
+			button.fa-plus {
+				&:before {
+					content: "\f067";
+					font-family: $font-icon-family;
+				}
+			}
 		}
 	}
 	
