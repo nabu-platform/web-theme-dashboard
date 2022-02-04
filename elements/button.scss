@@ -1,6 +1,32 @@
 button, .p-button, .button, .n-form-qr-retry, %button {
 	@include button-base;
 	
+	&.has-icon-right {
+		flex-direction: row-reverse;
+		.icon, 
+		.fa {
+			margin-right: 0;
+			margin-left: $space-sm;
+		}
+	}
+	
+	&.is-icon,
+	&.icon-only {
+		padding: 0;
+		width: 2.5rem;
+		height: 2.5rem !important;
+		
+		.icon {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: 0;
+    		transform: translate(-50%, -50%);
+			font-size: $font-size-base;
+			color: inherit !important;
+		}
+	}
+	
 	&.primary {
 		@include button-solid($color-primary-base, $color-primary-lightest);
 	}
@@ -36,56 +62,10 @@ button, .p-button, .button, .n-form-qr-retry, %button {
 	&.tertiary-inverse {
 		@include button-solid($color-neutral-lightest, $color-tertiary-base);
 	}
-
-	&.inline {
-		margin: 0;
-	}
-
-	&.rounded {
-		border-radius: 100px;
-	}
-	
-	&.has-icon,
-	&.has-icon-right {
-		height: $button-height;
-		padding: 0 1.5rem !important;
-		font-weight: $button-font-weight;
-		line-height: $button-line-height;
-
-		.icon, .fa {
-			margin-right: $space-sm;
-			font-size: $font-size-base;
-			color: inherit !important;
-			position: relative;
-			transform: none;
-			top: auto;
-			left: auto;
-		}
-	}
-	
-	&.has-icon-right {
-		flex-direction: row-reverse;
-		
-		.icon, .fa {
-			margin-right: 0;
-			margin-left: $space-sm;
-		}
-	}
-	
-	&.is-icon,
-	&.icon-only {
-		padding: 0;
-		width: 2.5rem;
-		height: 2.5rem !important;
-		
-		.icon {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			margin: 0;
-    		transform: translate(-50%, -50%);
-			font-size: $font-size-base;
-			color: inherit !important;
-		}
-	}
 }
+
+a.button, %a-button {
+	@include button-base;
+	@include button-solid($color-neutral-lightest, $color-secondary-base);
+}
+	

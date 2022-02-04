@@ -27,33 +27,56 @@
 				display: flex;
 				color: $color-accent-base;
 				align-items: center;
-				
+
 				@include media('<=small') {
-					font-size: $font-size-small;
+					display: none;
 				}
 			}
 			
 			.page-nav,
+			.page-logo,
 			.page-heading,
 			.page-back-button {
 				flex-grow: unset!important;
 				flex-basis: auto;
 			}
+			
+			.page-logo {
+				cursor: pointer;
+			}
 		}
 		
 		.page-content {
 			height: 100%;
-			padding-top: 68px;
 			width: 100%;
 			background: $color-neutral-lightest;
 			min-height: 100vh;
 			flex-grow: unset !important;
 			flex-basis: auto !important;
-	
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			padding-bottom: 3rem;
+			padding-top: 6.5rem;
+
 			@include media('<=small') {
-				padding-top: 58px;
+				padding-top: 5rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+			
+			&.full-width {
+				padding-top: 68px;
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+		
+				@include media('<=small') {
+					padding-top: 58px;
+					padding-left: 0;
+					padding-right: 0;
+					padding-bottom: 0;
+				}
 			}
 		}
 	}
 }
-

@@ -11,4 +11,12 @@
 		    padding: 2rem 0.5rem;
 		}
 	}
+	&.full-width,
+	&.large {
+		.n-prompt-content,
+		.n-prompt-container {
+			width: 100%;
+			max-width: 75rem;
+		}
+	}
 }

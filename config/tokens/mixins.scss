@@ -1,43 +1,32 @@
 $button-font-size: $font-size-small;
 $button-font-weight: $font-weight-emphasis;
 $button-line-height: 1 !important;
-$button-height: 2.25rem !important;
 $button-border-radius: 3px;
 $button-margin: 1rem;
 
-@mixin button-base {
-	appearance: none;
-	font-family: $font-family;
-	font-weight: $button-font-weight !important;
-	height: $button-height;
-	margin: 0 !important;
-	margin-bottom: $button-margin;
-	line-height: $button-line-height;
-	cursor: pointer;
-	border-radius: $button-border-radius;
-	font-size: $button-font-size !important;
-	border: none;
-	padding: 0 1.5rem;
+$button-height-small: 2rem;
+$button-height: 2.25rem;
+$button-height-large: 2.5rem;
 
-	&:hover {
-		* {
-			cursor: pointer;
-		}
-		transform: translate(0, 0) !important;
+@function button-get-size($size: "normal") {
+	$button-sizes: (
+		small: $button-height-small,
+		normal: $button-height,
+		large: $button-height-large
+	);
+	@if map-has-key($map: $button-sizes, $key: $size) {
+		@return map-get($map: $button-sizes, $key: $size);
 	}
-	&:disabled {
-		cursor: none;
-		pointer-events: none;
+	@else {
+		@warn "Requested size '#{$size}' is not available.";
+		@return null;
 	}
-	.icon {
-		margin-right: $space-sm;
-		font-size: $font-size-base;
-		color: inherit !important;
-		position: relative;
-		transform: none;
-		top: auto;
-		left: auto;
-	}
+}
+@mixin button-small {
+	height: button-get-size("small");
+}
+@mixin button-large {
+	height: button-get-size("large");
 }
 
 @mixin button-solid($bg, $text) {
@@ -50,7 +39,6 @@ $button-margin: 1rem;
 		transition: all 0.3s ease;
 	}
 }
-
 @mixin button-outline($color) {
 	color: $color;
 	box-shadow: $color 0px 0px 0px 1px inset;
@@ -60,5 +48,53 @@ $button-margin: 1rem;
 		background: lighten($color, 80%);
 		color: $color;
 		transition: all 0.3s ease;
+	}
+}
+@mixin button-base {
+	height: button-get-size("normal");
+	appearance: none;
+	font-family: $font-family;
+	font-weight: $button-font-weight !important;
+	height: 2.25rem;
+	margin: 0 !important;
+	margin-bottom: $button-margin;
+	line-height: $button-line-height;
+	cursor: pointer;
+	border-radius: $button-border-radius;
+	font-size: $button-font-size !important;
+	border: none;
+	padding: 0 1.5rem;
+	&.large {
+		@include button-large;
+	}
+	&.small {
+		@include button-small;
+	}
+	&.round {
+		border-radius: 100px;
+	}
+	&.full {
+		width: 100%;
+	}
+	.icon,
+	.fa {
+		position: relative;
+		margin-right: $space-sm;
+		font-size: $font-size-base;
+		color: inherit !important;
+		position: relative;
+		transform: none;
+		top: auto;
+		left: auto;
+	}
+	&:hover {
+		* {
+			cursor: pointer;
+		}
+		transform: translate(0, 0) !important;
+	}
+	&:disabled {
+		cursor: none;
+		pointer-events: none;
 	}
 }

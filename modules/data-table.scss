@@ -194,10 +194,15 @@ table.selectable {
 			flex-direction: row;
 			align-items: flex-end;
 			
+			@include media('<=small') {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			
 			> div {
 				flex: 1;
 				margin-right: $space-xs;
-				max-width: 30rem;
+				max-width: 20rem;
 			}
 			.filter-field {
 				.n-form-component {
@@ -207,7 +212,6 @@ table.selectable {
 		}
 	}
 
-	
 	.default-filter-tags {
 		display: flex;
 		flex-wrap: wrap;
