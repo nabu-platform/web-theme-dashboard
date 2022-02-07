@@ -96,5 +96,6 @@ $button-height-large: 2.5rem;
 	&:disabled {
 		cursor: none;
 		pointer-events: none;
+		opacity: .5;
 	}
 }

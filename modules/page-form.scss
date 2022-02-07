@@ -105,7 +105,9 @@
 	
 		.n-form-component-after {
 			margin: 0;
-			margin-top: .125rem;
+			font-size: $font-size-xsmall;
+			color: $color-neutral-base;
+			margin-top: .25rem;
 		}
 	}
 
@@ -157,7 +159,7 @@
 	}
 	
 	.n-form-text-number {
-		max-width: 20rem;
+		max-width: fit-content;
 	}
 	
 	.n-form-combo {
@@ -277,14 +279,19 @@
 
 	.dynamic-input {
 		display: flex;
+		align-items: flex-end;
 		margin-bottom: 0;
+		
 		@include media('<=small') {
 			flex-direction: column;
+			align-items: flex-start;
 			margin-bottom: 1rem;
 		}
 
 		.dynamic-input-contents {
 			display: flex;
+			flex-wrap: wrap;
+			
 			@include media('<=small') {
 				flex-direction: column;
 				margin-bottom: 1rem;
@@ -297,7 +304,7 @@
 				margin-right: 1rem;
 				padding: 0;
 				position: relative;
-
+				
 				> span.fa {
 					position: absolute;
 					font-size: $font-size-base;
@@ -306,8 +313,13 @@
 				}
 			}
 		}
+		
 		.dynamic-input-actions {
+			margin-bottom: 1.25rem;
+			
 			button.fa-plus {
+				white-space: nowrap;
+				
 				&:before {
 					content: "\f067";
 					font-family: $font-icon-family;

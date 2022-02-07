@@ -57,10 +57,13 @@
 		display: block;
 		color: $color-neutral-darkest;
 		background-color: transparent;
-		padding: 1rem 2rem;
+		padding: 1rem;
 		border: none;
 		border-bottom: solid 2px $color-neutral-light;
 		border-radius: 0;
+		@include media('>=medium') {
+			padding: 1rem 2rem;
+		}
 		&.is-active {
 			border-bottom-color: $color-primary-base;
 			color: $color-general-black;
