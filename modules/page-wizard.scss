@@ -19,32 +19,12 @@
 		.form-tabs {
 			margin-bottom: 3rem;
 			display: flex;
-			counter-reset: tabs;
 			
 			button {
 				flex: 1;
+				display: block;
 				text-align: left;
 				padding-left: 0.5rem;
-				
-				span {
-					@include media('<=small') {
-						display: none;
-					}	
-				}
-				
-				&.is-active {
-					span {
-						@include media('<=small') {
-							display: flex;
-						}	
-					}
-				}
-				
-				&:before {
-					counter-increment: tabs;
-					content: counter(tabs);
-					margin-right: .5rem;
-				}
 				
 				@include media('>=medium') {
 					margin: 0 1rem 0 0 !important;
@@ -95,6 +75,41 @@
 			
 			.p-form-footer {
 				padding-top: 3rem;
+			}
+		}
+	}
+	
+	.counter {
+		.page-form {
+			.form-tabs.counter {
+				counter-reset: tabs;
+				
+				button {
+					span {
+						@include media('<=small') {
+							display: none;
+						}	
+					}
+					
+					&.is-active {
+						span {
+							@include media('<=small') {
+								display: inline-block;
+							}	
+						}
+					}
+					
+					&:before {
+						counter-increment: tabs;
+						content: counter(tabs);
+						margin-right: .5rem;
+					}
+					
+					@include media('>=medium') {
+						margin: 0 1rem 0 0 !important;
+					}
+				
+				}
 			}
 		}
 	}
