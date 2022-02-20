@@ -3,11 +3,14 @@
 /// 1A.	PAGE-TOP-HEADER
 /// 1B.	PAGE-CONTENT
 
+$header-height: 68px !default;
+$header-height--small: 58px !default;
+
 .skeleton-fixed-header {
 	.page-main-view {
 		.page-top-header {
-			min-height: 68px;
-			height: 68px;
+			min-height: $header-height;
+			height: $header-height;
 			border-bottom: 1px solid $color-neutral-light;
 			position: fixed;
 			top: 0;
@@ -17,8 +20,8 @@
 			z-index: 10;
 
 			@include media('<=small') {
-				min-height: 58px;
-				height: 58px;
+				min-height: $header-height--small;
+				height: $header-height--small;
 			}
 			
 			.page-heading {

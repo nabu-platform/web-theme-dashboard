@@ -1,4 +1,4 @@
-button, .p-button, .button, .n-form-qr-retry, %button {
+button, .p-button, .button, .n-form-qr-retry, .n-form-scan-retry, %button {
 	@include button-base;
 	
 	&.has-icon-right {

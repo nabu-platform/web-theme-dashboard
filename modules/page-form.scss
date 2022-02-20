@@ -1,14 +1,3 @@
-@mixin button-solid($bg, $text) {
-	background: $bg;
-	color: $text;
-
-	&:hover {
-		background: darken($bg, 5%);
-		color: $text;
-		transition: all 0.3s ease;
-	}
-}
-
 .n-form,
 .nabu-form-component {
 	.n-form-component {
@@ -59,10 +48,6 @@
 					border: 1px solid $color-neutral-base;
 				}
 			}
-
-			text-area.field {
-				min-height: 12.5rem;
-			}
 			
 			.n-form-suffix {
 				height: auto;
@@ -74,10 +59,7 @@
 			    line-height: 1;
 			    padding: 0.5rem 1rem;
 			    transform: translateX(0);	
-				.icon {
-
-				}
-				
+			
 				&.n-icon {
 				    height: auto;
 				    top: 1px;
@@ -105,12 +87,14 @@
 	
 		.n-form-component-after {
 			margin: 0;
-			font-size: $font-size-xsmall;
-			color: $color-neutral-base;
 			margin-top: .25rem;
 		}
 	}
-
+	
+	.n-form-text-area {
+		min-height: 200px;
+	}
+	
 	.n-form-radio, .n-form-checkbox {
 		label {
 			padding-left: 1.75rem !important;
@@ -127,31 +111,33 @@
 			
 			&:after {
 				margin-left: 0.125rem;
+				font-size: $font-size-small;
+			}
+			
+			&.n-form-input-required {
+				span:after {
+					content: '*';
+					color: #EB5757;
+					padding: 0 0.4rem; 
+				}
+				&:after {
+					content: '';
+					color: $color-general-white;
+					padding: 0;
+				}
+
 			}
 		}
 	}
-	
+		
 	.n-form-switch.n-form-checkbox {
 		label.n-form-label {
 			padding-left: 4rem !important;
-			line-height: 1.2;
-			display: flex;
-			align-items: center;
-			span {
-				margin-top: .25rem;
-			}
 			&:before,
 			&:after {
-				border-radius: 100px;
-				@include media('<=small') {
-					transform: scale(.8);
-				}
+				border-radius: 100px;	
 			}
-			&:after {
-				@include media('<=small') {
-					left: 1.25rem !important;
-				}
-			}
+			
 			&:before {
 				box-shadow: inset 0 0 0 1px $color-accent-light !important;
 			}
@@ -159,7 +145,7 @@
 	}
 	
 	.n-form-text-number {
-		max-width: fit-content;
+		max-width: 20rem;
 	}
 	
 	.n-form-combo {
@@ -281,7 +267,7 @@
 		display: flex;
 		align-items: flex-end;
 		margin-bottom: 0;
-		
+			
 		@include media('<=small') {
 			flex-direction: column;
 			align-items: flex-start;
@@ -296,7 +282,7 @@
 				flex-direction: column;
 				margin-bottom: 1rem;
 			}
-			
+
 			.dynamic-input-iteration {
 				margin-bottom: 0.75rem;
 				background-color: transparent;
@@ -304,7 +290,7 @@
 				margin-right: 1rem;
 				padding: 0;
 				position: relative;
-				
+
 				> span.fa {
 					position: absolute;
 					font-size: $font-size-base;
@@ -313,13 +299,13 @@
 				}
 			}
 		}
-		
+
 		.dynamic-input-actions {
 			margin-bottom: 1.25rem;
-			
+
 			button.fa-plus {
 				white-space: nowrap;
-				
+
 				&:before {
 					content: "\f067";
 					font-family: $font-icon-family;
@@ -331,15 +317,16 @@
 	
 }
 
-.n-form-qr {
+.n-form-qr,
+.n-form-scan {
 	position: relative;
-	.n-form-qr-container {
+	.n-form-qr-container,
+	.n-form-scan-container {
 		text-align: center; 
 
 		.n-form-canvas-container {
 			position: relative;
-			display: inline-block;
-			width: 100%;
+			display: inline-block; 
 		}
 
 		.overlay {
@@ -352,15 +339,24 @@
 			justify-content: center;
 			align-items: center;
 			width: 100%;
+			min-width: 300px;
 
-			.n-form-qr-retry {
+			.n-form-qr-retry,
+			.n-form-scan-retry {
 				padding: 0 1rem;
 				@include button-solid($color-primary-base, $color-primary-lightest);
 			}
 		}
 	}
 
-	.n-form-qr-code {
+	.n-form-scan-container {
+		.overlay {
+			position: relative;
+		}
+	}
+
+	.n-form-qr-code,
+	.n-form-scan-code {
 		text-align: left;
 		width: 100% !important;
 		min-width: 250px;
@@ -387,8 +383,10 @@
 		margin-top: 1rem;
 	}
 
-	&.n-form-qr-scanned {
-		.n-form-qr-code {
+	&.n-form-qr-scanned,
+	&.n-form-scanned {
+		.n-form-qr-code,
+		.n-form-scan-code {
 			border: dashed 1px $color-neutral-base;
 
 			.actions {
@@ -458,6 +456,6 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 1rem;
+		margin-top: 1rem;
 	}
 }
